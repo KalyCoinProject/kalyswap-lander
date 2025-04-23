@@ -86,7 +86,11 @@ export default function PlatformPreview() {
               </TabsList>
 
               <div className="hidden md:flex items-center gap-2">
-                <Button variant="outline" size="sm" className="border-white/20 text-amber-100 hover:text-amber-400 hover:bg-white/10">
+                <Button 
+                  variant="outline" 
+                  size="sm" 
+                  className="border-amber-500/50 bg-black/60 text-amber-400 hover:text-amber-300 hover:bg-black/80 hover:border-amber-400 transition-all duration-200"
+                >
                   View Documentation
                 </Button>
                 <Button size="sm" className="bg-gradient-to-r from-amber-500 to-amber-600 hover:from-amber-600 hover:to-amber-700 text-white">
@@ -191,7 +195,11 @@ export default function PlatformPreview() {
         </div>
 
         <div className="flex justify-center mt-12 md:hidden">
-          <Button variant="outline" size="sm" className="mr-2 border-white/20 text-amber-100 hover:text-amber-400 hover:bg-white/10">
+          <Button 
+            variant="outline" 
+            size="sm" 
+            className="mr-2 border-amber-500/50 bg-black/60 text-amber-400 hover:text-amber-300 hover:bg-black/80 hover:border-amber-400 transition-all duration-200"
+          >
             View Documentation
           </Button>
           <Button size="sm" className="bg-gradient-to-r from-amber-500 to-amber-600 hover:from-amber-600 hover:to-amber-700 text-white">
