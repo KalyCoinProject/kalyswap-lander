@@ -35,25 +35,25 @@ const StatCard = ({
   }, []);
 
   return (
-    <Card className="bg-card border-none shadow-md hover:shadow-lg transition-all duration-300">
+    <Card className="bg-white/10 backdrop-blur-md border-white/20 hover:border-amber-500/50 shadow-md hover:shadow-lg transition-all duration-300">
       <CardHeader className="flex flex-row items-center justify-between pb-2">
-        <CardTitle className="text-sm font-medium text-muted-foreground">
+        <CardTitle className="text-sm font-medium text-amber-100/80">
           {title}
         </CardTitle>
-        <div className="p-2 rounded-full bg-primary/10">{icon}</div>
+        <div className="p-2 rounded-full bg-amber-500/20">{icon}</div>
       </CardHeader>
       <CardContent>
-        <div className="text-2xl font-bold">{value}</div>
+        <div className="text-2xl font-bold text-white">{value}</div>
         <div className="flex items-center mt-1">
           {change > 0 ? (
-            <ArrowUpRight className="h-4 w-4 text-green-500 mr-1" />
+            <ArrowUpRight className="h-4 w-4 text-green-400 mr-1" />
           ) : (
-            <ArrowDownRight className="h-4 w-4 text-red-500 mr-1" />
+            <ArrowDownRight className="h-4 w-4 text-red-400 mr-1" />
           )}
-          <span className={change > 0 ? "text-green-500" : "text-red-500"}>
+          <span className={change > 0 ? "text-green-400" : "text-red-400"}>
             {Math.abs(change)}%
           </span>
-          <span className="text-muted-foreground text-xs ml-1">
+          <span className="text-amber-100/60 text-xs ml-1">
             vs last week
           </span>
         </div>
@@ -62,13 +62,13 @@ const StatCard = ({
             {chartData.map((value, i) => (
               <div
                 key={i}
-                className="bg-primary/60 rounded-sm w-full"
+                className="bg-amber-500/40 rounded-sm w-full"
                 style={{ height: `${value}%` }}
               />
             ))}
           </div>
         )}
-        <Progress value={progress} className="h-1 mt-4" />
+        <Progress value={progress} className="h-1 mt-4 bg-white/5 [&>[role=progressbar]]:bg-amber-500" />
       </CardContent>
     </Card>
   );
@@ -97,14 +97,17 @@ const StatsDashboard = () => {
   const txChartData = [40, 50, 35, 45, 60, 55, 65];
 
   return (
-    <section className="w-full py-16 px-4 md:px-8 bg-background">
-      <div className="max-w-7xl mx-auto">
+    <section className="w-full py-16 px-4 md:px-8 bg-gradient-to-br from-black via-stone-950 to-amber-900">
+      <div className="container mx-auto">
         <div className="text-center mb-12">
-          <h2 className="text-3xl md:text-4xl font-bold mb-4 bg-clip-text text-transparent bg-gradient-to-r from-primary to-purple-600">
-            Real-Time Ecosystem Metrics
+          <h2 className="text-3xl md:text-4xl font-bold mb-4 text-white">
+            Real-Time Ecosystem{" "}
+            <span className="bg-clip-text text-transparent bg-gradient-to-r from-amber-400 to-amber-600">
+              Metrics
+            </span>
           </h2>
-          <p className="text-muted-foreground max-w-2xl mx-auto">
-            Track the growth and performance of the KalyChain DEX with live data
+          <p className="text-amber-100/80 max-w-2xl mx-auto">
+            Track the growth and performance of the KalySwap DEX with live data
             and analytics
           </p>
         </div>
@@ -114,7 +117,7 @@ const StatsDashboard = () => {
             title="Trading Volume (24h)"
             value={tradingVolume}
             change={12.5}
-            icon={<BarChart3 className="h-5 w-5 text-primary" />}
+            icon={<BarChart3 className="h-5 w-5 text-amber-400" />}
             chartData={volumeChartData}
           />
 
@@ -122,7 +125,7 @@ const StatsDashboard = () => {
             title="Total Value Locked"
             value={tvl}
             change={8.3}
-            icon={<Wallet className="h-5 w-5 text-primary" />}
+            icon={<Wallet className="h-5 w-5 text-amber-400" />}
             chartData={tvlChartData}
           />
 
@@ -130,7 +133,7 @@ const StatsDashboard = () => {
             title="Active Users"
             value={activeUsers}
             change={-2.1}
-            icon={<Users className="h-5 w-5 text-primary" />}
+            icon={<Users className="h-5 w-5 text-amber-400" />}
             chartData={usersChartData}
           />
 
@@ -138,14 +141,14 @@ const StatsDashboard = () => {
             title="Total Transactions"
             value={transactions}
             change={15.7}
-            icon={<TrendingUp className="h-5 w-5 text-primary" />}
+            icon={<TrendingUp className="h-5 w-5 text-amber-400" />}
             chartData={txChartData}
           />
         </div>
 
         <div className="mt-16 text-center">
-          <div className="inline-flex items-center justify-center p-1 rounded-full bg-muted">
-            <span className="px-3 py-1 text-xs font-medium">
+          <div className="inline-flex items-center justify-center p-1 rounded-full bg-white/10 backdrop-blur-md border border-white/20">
+            <span className="px-3 py-1 text-xs font-medium text-amber-100/80">
               Data refreshes every 5 minutes
             </span>
           </div>

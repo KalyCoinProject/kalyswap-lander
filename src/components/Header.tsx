@@ -8,10 +8,12 @@ export default function Header() {
       <div className="container mx-auto px-4 flex items-center justify-between">
         {/* Logo and Name */}
         <div className="flex items-center space-x-2">
-          <div className="w-10 h-10 bg-gradient-to-br from-blue-500 to-purple-600 rounded-lg flex items-center justify-center">
-            {/* Logo placeholder - replace with your actual logo */}
-            <span className="text-white font-bold text-xl">K</span>
-          </div>
+          <Image 
+            src="/images/logo.png" 
+            alt="KalySwap Logo" 
+            width={40} 
+            height={40}
+          />
           <span className="text-xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-amber-400 to-amber-600">
             KalySwap
           </span>

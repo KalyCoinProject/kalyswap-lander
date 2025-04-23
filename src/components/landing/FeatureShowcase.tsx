@@ -36,32 +36,32 @@ const FeatureCard = ({
 }: FeatureCardProps) => {
   return (
     <motion.div
-      whileHover={{ y: -5, boxShadow: "0 10px 30px rgba(0, 0, 0, 0.1)" }}
+      whileHover={{ y: -5, boxShadow: "0 10px 30px rgba(0, 0, 0, 0.2)" }}
       transition={{ duration: 0.3 }}
       className="h-full"
     >
-      <Card className="h-full bg-background border-border hover:border-primary/50 transition-all duration-300">
+      <Card className="h-full bg-white/10 backdrop-blur-md border-white/20 hover:border-amber-500/50 transition-all duration-300">
         <CardHeader>
           <div className="flex justify-between items-start">
-            <div className="p-3 rounded-lg bg-primary/10 text-primary">
+            <div className="p-3 rounded-lg bg-amber-500/20 text-amber-400">
               {icon}
             </div>
             {isUpcoming && (
               <Badge
                 variant="secondary"
-                className="bg-secondary/20 text-secondary"
+                className="bg-amber-600/20 text-amber-300"
               >
                 Coming Soon
               </Badge>
             )}
           </div>
-          <CardTitle className="mt-4">{title}</CardTitle>
-          <CardDescription className="text-muted-foreground">
+          <CardTitle className="mt-4 text-white">{title}</CardTitle>
+          <CardDescription className="text-amber-100/80">
             {description}
           </CardDescription>
         </CardHeader>
         <CardContent>
-          <div className="flex items-center text-sm text-primary font-medium cursor-pointer group">
+          <div className="flex items-center text-sm text-amber-400 font-medium cursor-pointer group">
             Learn more
             <ArrowRight className="ml-1 h-4 w-4 transition-transform group-hover:translate-x-1" />
           </div>
@@ -131,8 +131,8 @@ const FeatureShowcase = () => {
   ];
 
   return (
-    <section className="py-20 px-4 md:px-6 lg:px-8 bg-background">
-      <div className="max-w-7xl mx-auto">
+    <section className="w-full py-20 bg-gradient-to-br from-black via-stone-950 to-amber-900">
+      <div className="container mx-auto">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -140,22 +140,22 @@ const FeatureShowcase = () => {
           viewport={{ once: true }}
           className="text-center mb-16"
         >
-          <h2 className="text-3xl md:text-4xl font-bold mb-4">
+          <h2 className="text-3xl md:text-4xl font-bold mb-4 text-white">
             Powerful DeFi Features
           </h2>
-          <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-            Experience the future of decentralized finance with KalyChain DEX's
+          <p className="text-xl text-amber-100 max-w-3xl mx-auto">
+            Experience the future of decentralized finance with KalySwap DEX's
             comprehensive suite of features
           </p>
         </motion.div>
 
-        <div className="mb-20">
+        <div className="mb-20 px-4 md:px-6 lg:px-8">
           <motion.h3
             initial={{ opacity: 0, x: -20 }}
             whileInView={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.5 }}
             viewport={{ once: true }}
-            className="text-2xl font-bold mb-8"
+            className="text-2xl font-bold mb-8 text-white"
           >
             Current Features
           </motion.h3>
@@ -178,13 +178,13 @@ const FeatureShowcase = () => {
           </div>
         </div>
 
-        <div>
+        <div className="px-4 md:px-6 lg:px-8">
           <motion.h3
             initial={{ opacity: 0, x: -20 }}
             whileInView={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.5 }}
             viewport={{ once: true }}
-            className="text-2xl font-bold mb-8"
+            className="text-2xl font-bold mb-8 text-white"
           >
             Coming Soon
           </motion.h3>
