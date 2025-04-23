@@ -72,7 +72,7 @@ export default function PlatformPreview() {
             className="w-full max-w-5xl mx-auto"
           >
             <div className="flex flex-col md:flex-row justify-between items-start md:items-center gap-4 mb-8">
-              <TabsList className="grid grid-cols-3 w-full md:w-auto bg-white/10 backdrop-blur-md border-white/20">
+              <TabsList className="grid grid-cols-3 w-full md:w-auto bg-black/40 backdrop-blur-md border-white/20 p-0">
                 {platformFeatures.map((feature) => (
                   <TabsTrigger
                     key={feature.id}
