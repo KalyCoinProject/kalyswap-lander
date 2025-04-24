@@ -24,8 +24,7 @@ export default function PlatformPreview() {
       description:
         "Experience seamless token swaps with real-time price charts, limit orders, and advanced trading tools.",
       icon: <BarChart3 className="h-6 w-6" />,
-      mockupImage:
-        "https://images.unsplash.com/photo-1642790551116-18abb80dce8d?w=800&q=80",
+      mockupImage: "/images/KalySwap2.jpg",
     },
     {
       id: "bridge",
@@ -33,8 +32,7 @@ export default function PlatformPreview() {
       description:
         "Transfer assets seamlessly between KalyChain and other major blockchains with our secure bridge technology.",
       icon: <Layers className="h-6 w-6" />,
-      mockupImage:
-        "https://images.unsplash.com/photo-1639762681057-408e52192e55?w=800&q=80",
+      mockupImage: "/images/KalyBridge.png",
     },
     {
       id: "launchpad",
@@ -42,14 +40,20 @@ export default function PlatformPreview() {
       description:
         "Launch your project on KalyChain with our comprehensive launchpad solution for fair and transparent token distribution.",
       icon: <Rocket className="h-6 w-6" />,
-      mockupImage:
-        "https://images.unsplash.com/photo-1620712943543-bcc4688e7485?w=800&q=80",
+      mockupImage: "/images/KalySwap1.jpg",
     },
   ];
 
   return (
-    <section className="w-full py-24 bg-gradient-to-br from-black via-stone-950 to-amber-900">
-      <div className="container px-4 md:px-6">
+    <section className="w-full py-24 relative">
+      {/* Solid background with grid overlay */}
+      <div className="absolute inset-0 bg-black">
+        <div 
+          className="absolute inset-0 bg-[url('/images/grid-overlay.svg')] opacity-70"
+          style={{ backgroundSize: '50px 50px' }}
+        />
+      </div>
+      <div className="container px-4 md:px-6 relative">
         <div className="flex flex-col items-center text-center space-y-4 mb-12">
           <h2 className="text-3xl md:text-4xl font-bold tracking-tighter text-white">
             One Platform,{" "}
