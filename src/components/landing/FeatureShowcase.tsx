@@ -60,12 +60,14 @@ const FeatureCard = ({
             {description}
           </CardDescription>
         </CardHeader>
-        <CardContent>
-          <div className="flex items-center text-sm text-amber-400 font-medium cursor-pointer group">
-            Learn more
-            <ArrowRight className="ml-1 h-4 w-4 transition-transform group-hover:translate-x-1" />
-          </div>
-        </CardContent>
+        {!isUpcoming && (
+          <CardContent>
+            <div className="flex items-center text-sm text-amber-400 font-medium cursor-pointer group">
+              Learn more
+              <ArrowRight className="ml-1 h-4 w-4 transition-transform group-hover:translate-x-1" />
+            </div>
+          </CardContent>
+        )}
       </Card>
     </motion.div>
   );

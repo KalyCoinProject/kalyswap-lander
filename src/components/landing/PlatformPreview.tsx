@@ -89,18 +89,7 @@ export default function PlatformPreview() {
                 ))}
               </TabsList>
 
-              <div className="hidden md:flex items-center gap-2">
-                <Button 
-                  variant="outline" 
-                  size="sm" 
-                  className="border-amber-500/50 bg-black/60 text-amber-400 hover:text-amber-300 hover:bg-black/80 hover:border-amber-400 transition-all duration-200"
-                >
-                  View Documentation
-                </Button>
-                <Button size="sm" className="bg-gradient-to-r from-amber-500 to-amber-600 hover:from-amber-600 hover:to-amber-700 text-white">
-                  Try Beta Version
-                </Button>
-              </div>
+              
             </div>
 
             {platformFeatures.map((feature) => (
@@ -172,8 +161,20 @@ export default function PlatformPreview() {
                       </CardContent>
                     </Card>
 
-                    <Button className="mt-4 group bg-gradient-to-r from-amber-500 to-amber-600 hover:from-amber-600 hover:to-amber-700 text-white">
-                      Explore {feature.title}
+                    <Button 
+                      className="mt-4 group bg-gradient-to-r from-amber-500 to-amber-600 hover:from-amber-600 hover:to-amber-700 text-white"
+                      onClick={() => {
+                        if (feature.id === "trading") {
+                          window.open("https://app.kalyswap.io/#/swap", "_blank", "noopener,noreferrer");
+                        } else if (feature.id === "bridge") {
+                          window.open("https://bridge.kalychain.io/", "_blank", "noopener,noreferrer");
+                        }
+                      }}
+                      disabled={feature.id === "launchpad"}
+                    >
+                      {feature.id === "trading" ? "KalySwap Legacy Version" :
+                       feature.id === "bridge" ? "Explore Cross-Chain Bridge" :
+                       "Coming Soon"}
                       <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
                     </Button>
                   </div>
@@ -189,7 +190,7 @@ export default function PlatformPreview() {
                     </div>
 
                     <div className="absolute -bottom-4 -right-4 bg-amber-500/20 backdrop-blur-md border border-amber-500/30 rounded-lg p-3 shadow-lg">
-                      <div className="text-sm font-medium text-amber-100">Coming Q3 2023</div>
+                      <div className="text-sm font-medium text-amber-100">Coming Q4 2025</div>
                     </div>
                   </div>
                 </div>
@@ -198,18 +199,6 @@ export default function PlatformPreview() {
           </Tabs>
         </div>
 
-        <div className="flex justify-center mt-12 md:hidden">
-          <Button 
-            variant="outline" 
-            size="sm" 
-            className="mr-2 border-amber-500/50 bg-black/60 text-amber-400 hover:text-amber-300 hover:bg-black/80 hover:border-amber-400 transition-all duration-200"
-          >
-            View Documentation
-          </Button>
-          <Button size="sm" className="bg-gradient-to-r from-amber-500 to-amber-600 hover:from-amber-600 hover:to-amber-700 text-white">
-            Try Beta Version
-          </Button>
-        </div>
       </div>
     </section>
   );
