@@ -45,7 +45,7 @@ export default function PlatformPreview() {
   ];
 
   return (
-    <section className="w-full py-24 relative">
+    <section id="platform" className="w-full py-24 relative scroll-mt-20">
       {/* Solid background with grid overlay */}
       <div className="absolute inset-0 bg-black">
         <div 

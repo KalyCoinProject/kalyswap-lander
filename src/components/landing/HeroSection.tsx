@@ -235,20 +235,32 @@ const HeroSection = ({
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.7, delay: 0.4 }}
           >
-            <Button
-              size="lg"
-              className="bg-gradient-to-r from-amber-500 to-amber-600 hover:from-amber-600 hover:to-amber-700 text-white px-8 py-6 text-lg rounded-xl shadow-lg hover:shadow-xl transition-all"
+            <a
+              href="https://app.kalyswap.io/#/swap"
+              target="_blank"
+              rel="noopener noreferrer"
             >
-              {ctaText1} <ArrowRight className="ml-2 h-5 w-5" />
-            </Button>
+              <Button
+                size="lg"
+                className="bg-gradient-to-r from-amber-500 to-amber-600 hover:from-amber-600 hover:to-amber-700 text-white px-8 py-6 text-lg rounded-xl shadow-lg hover:shadow-xl transition-all"
+              >
+                {ctaText1} <ArrowRight className="ml-2 h-5 w-5" />
+              </Button>
+            </a>
 
-            <Button
-              size="lg"
-              variant="outline"
-              className="bg-white/10 backdrop-blur-md border-white/20 text-white hover:bg-white/20 px-8 py-6 text-lg rounded-xl shadow-lg hover:shadow-xl transition-all"
+            <a
+              href="https://app.kalyswap.io/#/pool"
+              target="_blank"
+              rel="noopener noreferrer"
             >
-              {ctaText2}
-            </Button>
+              <Button
+                size="lg"
+                variant="outline"
+                className="bg-white/10 backdrop-blur-md border-white/20 text-white hover:bg-white/20 px-8 py-6 text-lg rounded-xl shadow-lg hover:shadow-xl transition-all"
+              >
+                {ctaText2}
+              </Button>
+            </a>
           </motion.div>
         </div>
       </div>

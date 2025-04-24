@@ -97,7 +97,7 @@ const StatsDashboard = () => {
   const txChartData = [40, 50, 35, 45, 60, 55, 65];
 
   return (
-    <section className="w-full py-16 px-4 md:px-8 bg-gradient-to-br from-black via-stone-950 to-amber-900">
+    <section id="stats" className="w-full py-16 px-4 md:px-8 bg-gradient-to-br from-black via-stone-950 to-amber-900 scroll-mt-20">
       <div className="container mx-auto">
         <div className="text-center mb-12">
           <h2 className="text-3xl md:text-4xl font-bold mb-4 text-white">

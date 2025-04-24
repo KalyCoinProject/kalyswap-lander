@@ -37,10 +37,41 @@ export default function Home() {
                 Products
               </h4>
               <ul className="space-y-2 text-amber-100/80 text-sm">
-                <li className="hover:text-amber-400 transition-colors cursor-pointer">Token Swap</li>
-                <li className="hover:text-amber-400 transition-colors cursor-pointer">Liquidity Pools</li>
-                <li className="hover:text-amber-400 transition-colors cursor-pointer">Bridge</li>
-                <li className="hover:text-amber-400 transition-colors cursor-pointer">Launchpad</li>
+                <li>
+                  <a 
+                    href="https://app.kalyswap.io/#/swap" 
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                    className="hover:text-amber-400 transition-colors cursor-pointer"
+                  >
+                    Token Swap
+                  </a>
+                </li>
+                <li>
+                  <a 
+                    href="https://app.kalyswap.io/#/pool" 
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                    className="hover:text-amber-400 transition-colors cursor-pointer"
+                  >
+                    Liquidity Pools
+                  </a>
+                </li>
+                <li>
+                  <a 
+                    href="https://bridge.kalychain.io" 
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                    className="hover:text-amber-400 transition-colors cursor-pointer"
+                  >
+                    Bridge
+                  </a>
+                </li>
+                <li>
+                  <span className="hover:text-amber-400 transition-colors cursor-pointer opacity-50">
+                    Launchpad (Coming Soon)
+                  </span>
+                </li>
               </ul>
             </div>
             <div>
@@ -48,19 +79,91 @@ export default function Home() {
                 Resources
               </h4>
               <ul className="space-y-2 text-amber-100/80 text-sm">
-                <li className="hover:text-amber-400 transition-colors cursor-pointer">Documentation</li>
-                <li className="hover:text-amber-400 transition-colors cursor-pointer">API</li>
-                <li className="hover:text-amber-400 transition-colors cursor-pointer">Analytics</li>
-                <li className="hover:text-amber-400 transition-colors cursor-pointer">Governance</li>
+                <li>
+                  <a 
+                    href="https://docs.kalychain.io" 
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                    className="hover:text-amber-400 transition-colors cursor-pointer"
+                  >
+                    Documentation
+                  </a>
+                </li>
+                <li>
+                  <a 
+                    href="https://kalyscan.io/api-docs" 
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                    className="hover:text-amber-400 transition-colors cursor-pointer"
+                  >
+                    API
+                  </a>
+                </li>
+                <li>
+                  <a 
+                    href="https://kalyscan.io" 
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                    className="hover:text-amber-400 transition-colors cursor-pointer"
+                  >
+                    Block Explorer
+                  </a>
+                </li>
+                <li>
+                  <a 
+                    href="https://dao.kalychain.io" 
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                    className="hover:text-amber-400 transition-colors cursor-pointer"
+                  >
+                    Governance
+                  </a>
+                </li>
               </ul>
             </div>
             <div>
               <h4 className="text-lg font-semibold text-amber-400 mb-4">Connect</h4>
               <ul className="space-y-2 text-amber-100/80 text-sm">
-                <li className="hover:text-amber-400 transition-colors cursor-pointer">Twitter</li>
-                <li className="hover:text-amber-400 transition-colors cursor-pointer">Discord</li>
-                <li className="hover:text-amber-400 transition-colors cursor-pointer">Telegram</li>
-                <li className="hover:text-amber-400 transition-colors cursor-pointer">GitHub</li>
+                <li>
+                  <a 
+                    href="https://twitter.com/KalyChain" 
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                    className="hover:text-amber-400 transition-colors cursor-pointer"
+                  >
+                    Twitter
+                  </a>
+                </li>
+                <li>
+                  <a 
+                    href="https://discord.gg/4fDuS3cBJw" 
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                    className="hover:text-amber-400 transition-colors cursor-pointer"
+                  >
+                    Discord
+                  </a>
+                </li>
+                <li>
+                  <a 
+                    href="https://t.me/+yj8Ae9lNXmg1Yzkx" 
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                    className="hover:text-amber-400 transition-colors cursor-pointer"
+                  >
+                    Telegram
+                  </a>
+                </li>
+                <li>
+                  <a 
+                    href="https://github.com/KalyCoinProject" 
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                    className="hover:text-amber-400 transition-colors cursor-pointer"
+                  >
+                    GitHub
+                  </a>
+                </li>
               </ul>
             </div>
           </div>

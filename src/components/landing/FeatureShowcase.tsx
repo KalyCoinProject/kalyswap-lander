@@ -163,7 +163,7 @@ const FeatureShowcase = () => {
 
   return (
     <>
-      <section className="w-full py-20 bg-gradient-to-br from-black via-stone-950 to-amber-900">
+      <section id="features" className="w-full py-20 bg-gradient-to-br from-black via-stone-950 to-amber-900 scroll-mt-20">
         <div className="container mx-auto">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
