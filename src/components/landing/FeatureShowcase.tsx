@@ -95,6 +95,9 @@ const FeatureCard = ({
 
 const FeatureShowcase = () => {
   const [showTokenSwapsDialog, setShowTokenSwapsDialog] = useState(false);
+  const [showLiquidityDialog, setShowLiquidityDialog] = useState(false);
+  const [showSecurityDialog, setShowSecurityDialog] = useState(false);
+  const [showWalletDialog, setShowWalletDialog] = useState(false);
 
   const currentFeatures: Feature[] = [
     {
@@ -109,18 +112,21 @@ const FeatureShowcase = () => {
       title: "Liquidity Pools",
       description:
         "Create and manage liquidity pools for any token pair and earn passive income from trading fees.",
+      onLearnMore: () => setShowLiquidityDialog(true),
     },
     {
       icon: <Shield className="h-6 w-6" />,
       title: "Secure Transactions",
       description:
         "All transactions are secured by KalyChain's robust blockchain technology and smart contracts.",
+      onLearnMore: () => setShowSecurityDialog(true),
     },
     {
       icon: <Wallet className="h-6 w-6" />,
       title: "Wallet Integration",
       description:
         "Seamlessly connect your preferred wallet and manage your assets with ease.",
+      onLearnMore: () => setShowWalletDialog(true),
     },
   ];
 
@@ -267,6 +273,126 @@ const FeatureShowcase = () => {
                   className="inline-flex items-center gap-2 text-amber-400 hover:text-amber-300 transition-colors"
                 >
                   Try Token Swaps
+                  <ExternalLink className="h-4 w-4" />
+                </a>
+              </div>
+            </DialogDescription>
+          </DialogHeader>
+        </DialogContent>
+      </Dialog>
+
+      <Dialog open={showLiquidityDialog} onOpenChange={setShowLiquidityDialog}>
+        <DialogContent className="bg-stone-950 border-white/20 text-white">
+          <DialogHeader>
+            <div className="flex items-center gap-3">
+              <div className="p-3 rounded-lg bg-amber-500/20 text-amber-400">
+                <Layers className="h-6 w-6" />
+              </div>
+              <DialogTitle className="text-xl">Liquidity Pools</DialogTitle>
+            </div>
+            <DialogDescription className="text-amber-100/80 pt-4 space-y-4">
+              <p>
+                KalySwap currently uses the Uniswap v2 liquidity pool model, where liquidity providers receive
+                LP tokens representing their share in the pool. These tokens can be used to claim trading fees
+                and withdraw liquidity at any time. This model has proven reliable and efficient for basic
+                liquidity provision.
+              </p>
+              <p>
+                In our upcoming upgrade to the Uniswap v3 model, liquidity providers will receive NFT positions
+                instead of traditional LP tokens. This advancement allows for concentrated liquidity, meaning
+                providers can specify price ranges for their assets, potentially earning higher fees with the
+                same amount of capital.
+              </p>
+              <div className="pt-4">
+                <a
+                  href="https://app.kalyswap.io/#/pool"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-2 text-amber-400 hover:text-amber-300 transition-colors"
+                >
+                  Provide Liquidity
+                  <ExternalLink className="h-4 w-4" />
+                </a>
+              </div>
+            </DialogDescription>
+          </DialogHeader>
+        </DialogContent>
+      </Dialog>
+
+      <Dialog open={showSecurityDialog} onOpenChange={setShowSecurityDialog}>
+        <DialogContent className="bg-stone-950 border-white/20 text-white">
+          <DialogHeader>
+            <div className="flex items-center gap-3">
+              <div className="p-3 rounded-lg bg-amber-500/20 text-amber-400">
+                <Shield className="h-6 w-6" />
+              </div>
+              <DialogTitle className="text-xl">Enterprise-Grade Security</DialogTitle>
+            </div>
+            <DialogDescription className="text-amber-100/80 pt-4 space-y-4">
+              <p>
+                KalyChain is built on Hyperledger Besu, an enterprise-grade Ethereum client developed under
+                the Linux Foundation. This foundation provides our network with institutional-level security
+                and reliability, making it ideal for both public and private permissioned network use cases.
+              </p>
+              <p>
+                One of KalyChain's standout features is its instant finality, achieved through Besu's
+                advanced consensus mechanisms. This means transactions are confirmed and irreversible almost
+                immediately, providing users with unparalleled security and peace of mind for their DeFi
+                operations.
+              </p>
+              <p>
+                Our implementation includes comprehensive permissioning schemes and robust smart contract
+                security measures, specifically designed for a secure consortium environment while maintaining
+                the flexibility of the Ethereum Virtual Machine (EVM).
+              </p>
+              <div className="pt-4">
+                <a
+                  href="https://www.lfdecentralizedtrust.org/projects/besu"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-2 text-amber-400 hover:text-amber-300 transition-colors"
+                >
+                  Learn More About Hyperledger Besu
+                  <ExternalLink className="h-4 w-4" />
+                </a>
+              </div>
+            </DialogDescription>
+          </DialogHeader>
+        </DialogContent>
+      </Dialog>
+
+      <Dialog open={showWalletDialog} onOpenChange={setShowWalletDialog}>
+        <DialogContent className="bg-stone-950 border-white/20 text-white">
+          <DialogHeader>
+            <div className="flex items-center gap-3">
+              <div className="p-3 rounded-lg bg-amber-500/20 text-amber-400">
+                <Wallet className="h-6 w-6" />
+              </div>
+              <DialogTitle className="text-xl">Wallet Integration</DialogTitle>
+            </div>
+            <DialogDescription className="text-amber-100/80 pt-4 space-y-4">
+              <p>
+                As an EVM-compatible blockchain, KalyChain seamlessly integrates with all major Ethereum-compatible wallets.
+                This means you can use popular wallets like MetaMask, Trust Wallet, Rainbow, Coinbase Wallet, and many others
+                to interact with KalySwap and manage your assets on the KalyChain network.
+              </p>
+              <p>
+                The EVM compatibility ensures that any wallet supporting the Ethereum standard can be used to:
+              </p>
+              <ul className="list-disc pl-6 space-y-2">
+                <li>Connect to KalySwap DEX</li>
+                <li>Sign transactions for token swaps</li>
+                <li>Manage liquidity positions</li>
+                <li>View token balances and transaction history</li>
+              </ul>
+              <div className="pt-4">
+                <a
+                  href="https://www.alchemy.com/dapps/list-of/software-wallets-on-ethereum"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-2 text-amber-400 hover:text-amber-300 transition-colors"
+                >
+                  Explore Compatible Wallets
                   <ExternalLink className="h-4 w-4" />
                 </a>
               </div>
